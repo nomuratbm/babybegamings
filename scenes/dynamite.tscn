@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://d10rk46v06ho5"]
+
+[ext_resource type="Script" uid="uid://dudbe1r6wooh5" path="res://scripts/dynamite.gd" id="1_ys8y4"]
+[ext_resource type="Texture2D" uid="uid://ckyebboafs7t2" path="res://assets/sprites.png" id="2_l6oux"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbdca"]
+atlas = ExtResource("2_l6oux")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20ufy"]
+atlas = ExtResource("2_l6oux")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8siye"]
+atlas = ExtResource("2_l6oux")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pfrg7"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_sbdca")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_20ufy")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_8siye")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g8cqc"]
+size = Vector2(16, 16)
+
+[node name="Dynamite" type="Area2D"]
+collision_layer = 8
+script = ExtResource("1_ys8y4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pfrg7")
+autoplay = "default"
+frame_progress = 0.9575715
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g8cqc")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

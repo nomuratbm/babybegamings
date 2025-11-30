@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://dkiybwdiidnfp"]
+
+[ext_resource type="Texture2D" uid="uid://ckyebboafs7t2" path="res://assets/sprites.png" id="1_gwcag"]
+[ext_resource type="Script" uid="uid://bhdlwrpb5aqsr" path="res://scripts/coral.gd" id="1_qqx7l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqx7l"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g6hn"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(80, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6uoex"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0rcf"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(112, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kh6w5"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(128, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nf22b"]
+atlas = ExtResource("1_gwcag")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6uoex"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_qqx7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g6hn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6uoex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0rcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kh6w5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nf22b")
+}],
+"loop": false,
+"name": &"destroy",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u0rcf"]
+size = Vector2(16, 16)
+
+[node name="Coral" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_qqx7l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6uoex")
+animation = &"destroy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u0rcf")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
