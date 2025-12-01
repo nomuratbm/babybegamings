@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://dpqj3f5qd6bx5"]
+[gd_scene load_steps=14 format=3 uid="uid://dpqj3f5qd6bx5"]
 
 [ext_resource type="Texture2D" uid="uid://ckyebboafs7t2" path="res://assets/sprites.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://dw4t3f8xgpy5a" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://bcb7i1h461ls5" path="res://scripts/raycasts.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://byg27ab2x5m64" path="res://scripts/dynamite_placement_system.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://b6nuwimfrd07y" path="res://scripts/power_up_system.gd" id="5_qlg0r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("1_3vyb7")
@@ -38,7 +39,7 @@ animations = [{
 "duration": 4.0,
 "texture": SubResource("AtlasTexture_qlg0r")
 }],
-"loop": true,
+"loop": false,
 "name": &"die",
 "speed": 8.0
 }, {
@@ -79,6 +80,7 @@ animations = [{
 size = Vector2(16, 16)
 
 [node name="Player" type="Area2D"]
+collision_mask = 64
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -154,3 +156,16 @@ collide_with_areas = true
 
 [node name="DynamitePlacementSystem" type="Node" parent="."]
 script = ExtResource("4_dqkch")
+
+[node name="PowerUpSystem" type="Node" parent="."]
+script = ExtResource("5_qlg0r")
+
+[node name="DynamiteUpTimer" type="Timer" parent="PowerUpSystem"]
+wait_time = 10.0
+
+[node name="FireUpTimer" type="Timer" parent="PowerUpSystem"]
+wait_time = 10.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="PowerUpSystem/DynamiteUpTimer" to="PowerUpSystem" method="_on_dynamite_up_timer_timeout"]
+[connection signal="timeout" from="PowerUpSystem/FireUpTimer" to="PowerUpSystem" method="_on_fire_up_timer_timeout"]

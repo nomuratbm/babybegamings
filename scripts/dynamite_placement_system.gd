@@ -20,7 +20,7 @@ func place_dynamite():
 	var player_position = player.position
 	var dynamite_position = Vector2(round(player_position.x / TILE_SIZE) * TILE_SIZE, 
 		round(player_position.y / TILE_SIZE) * TILE_SIZE)
-	
+	dynamite.explosion_size = explosion_size
 	dynamite.position = dynamite_position
 	get_tree().root.add_child(dynamite)
 	dynamites_placed += 1

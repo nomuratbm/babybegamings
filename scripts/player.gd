@@ -4,6 +4,7 @@ class_name Player
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var raycasts: Raycasts = $Raycasts
 @onready var dynamite_placement_system: Node = $DynamitePlacementSystem
+@onready var power_up_system: Node = $PowerUpSystem
 
 @export var movement_speed: float = 75
 
@@ -45,4 +46,12 @@ func _input(event: InputEvent) -> void:
 		animated_sprite.stop()
 
 func die():
-	print("die")
+	animated_sprite.play("die")
+	movement = Vector2.ZERO
+	set_process_input(false)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area is PowerUp:
+		power_up_system.enable_power_up((area as PowerUp).type)
+		area.queue_free()
