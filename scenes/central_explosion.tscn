@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dokxqitq35llo" path="res://scripts/central_explosion.gd" id="1_7inpy"]
 [ext_resource type="Texture2D" uid="uid://ckyebboafs7t2" path="res://assets/sprites.png" id="1_si6ib"]
-[ext_resource type="Script" uid="uid://bcb7i1h461ls5" path="res://scripts/raycasts.gd" id="3_f376v"]
+[ext_resource type="Script" uid="uid://bcb7i1h461ls5" path="res://scripts/raycasts.gd" id="3_7inpy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y46xu"]
 atlas = ExtResource("1_si6ib")
@@ -57,7 +57,7 @@ frame_progress = 0.3286027
 shape = SubResource("RectangleShape2D_f376v")
 
 [node name="Raycasts" type="Node2D" parent="."]
-script = ExtResource("3_f376v")
+script = ExtResource("3_7inpy")
 metadata/_custom_type_script = "uid://bcb7i1h461ls5"
 
 [node name="RayCastRight" type="RayCast2D" parent="Raycasts"]

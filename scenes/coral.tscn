@@ -63,6 +63,7 @@ size = Vector2(16, 16)
 
 [node name="Coral" type="Area2D"]
 collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_qqx7l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

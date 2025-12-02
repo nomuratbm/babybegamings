@@ -98,13 +98,13 @@ script = ExtResource("3_qhqgy")
 
 [node name="Left" type="Node2D" parent="Raycasts/Horizontal"]
 
-[node name="LeftHorizontalBottom" type="RayCast2D" parent="Raycasts/Horizontal/Left"]
+[node name="LeftHorizontalBottom" type="RayCast2D" parent="Raycasts/Horizontal/Left" groups=["raycasts"]]
 position = Vector2(-6, 4)
 target_position = Vector2(-2, 0)
 collision_mask = 14
 collide_with_areas = true
 
-[node name="LeftHorizontalTop" type="RayCast2D" parent="Raycasts/Horizontal/Left"]
+[node name="LeftHorizontalTop" type="RayCast2D" parent="Raycasts/Horizontal/Left" groups=["raycasts"]]
 position = Vector2(-6, -5)
 target_position = Vector2(-2, 0)
 collision_mask = 14
@@ -112,13 +112,13 @@ collide_with_areas = true
 
 [node name="Right" type="Node2D" parent="Raycasts/Horizontal"]
 
-[node name="RightHorizontalBottom" type="RayCast2D" parent="Raycasts/Horizontal/Right"]
+[node name="RightHorizontalBottom" type="RayCast2D" parent="Raycasts/Horizontal/Right" groups=["raycasts"]]
 position = Vector2(6, 4)
 target_position = Vector2(2, 0)
 collision_mask = 14
 collide_with_areas = true
 
-[node name="RightHorizontalTop" type="RayCast2D" parent="Raycasts/Horizontal/Right"]
+[node name="RightHorizontalTop" type="RayCast2D" parent="Raycasts/Horizontal/Right" groups=["raycasts"]]
 position = Vector2(6, -5)
 target_position = Vector2(2, 0)
 collision_mask = 14
@@ -128,13 +128,13 @@ collide_with_areas = true
 
 [node name="Top" type="Node2D" parent="Raycasts/Vertical"]
 
-[node name="TopVerticalRight" type="RayCast2D" parent="Raycasts/Vertical/Top"]
+[node name="TopVerticalRight" type="RayCast2D" parent="Raycasts/Vertical/Top" groups=["raycasts"]]
 position = Vector2(3, -6)
 target_position = Vector2(0, -2)
 collision_mask = 14
 collide_with_areas = true
 
-[node name="TopVerticalLeft" type="RayCast2D" parent="Raycasts/Vertical/Top"]
+[node name="TopVerticalLeft" type="RayCast2D" parent="Raycasts/Vertical/Top" groups=["raycasts"]]
 position = Vector2(-3, -6)
 target_position = Vector2(0, -2)
 collision_mask = 14
@@ -142,13 +142,13 @@ collide_with_areas = true
 
 [node name="Bottom" type="Node2D" parent="Raycasts/Vertical"]
 
-[node name="BottomVerticalRight" type="RayCast2D" parent="Raycasts/Vertical/Bottom"]
+[node name="BottomVerticalRight" type="RayCast2D" parent="Raycasts/Vertical/Bottom" groups=["raycasts"]]
 position = Vector2(2, 6)
 target_position = Vector2(0, 2)
 collision_mask = 14
 collide_with_areas = true
 
-[node name="BottomVerticalLeft" type="RayCast2D" parent="Raycasts/Vertical/Bottom"]
+[node name="BottomVerticalLeft" type="RayCast2D" parent="Raycasts/Vertical/Bottom" groups=["raycasts"]]
 position = Vector2(-2, 6)
 target_position = Vector2(0, 2)
 collision_mask = 14
