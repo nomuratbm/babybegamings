@@ -22,7 +22,9 @@ func enable_power_up(power_up_type: Utils.PowerUpType):
 			fire_up_timer.start()
 
 func _on_dynamite_up_timer_timeout() -> void:
-	player.max_dynamites_at_once -= 1
+	if(player.max_dynamites_at_once > 1):
+		player.max_dynamites_at_once -= 1
 
 func _on_fire_up_timer_timeout() -> void:
-	dynamite_placement_system.explosion_size -= 1
+	if(dynamite_placement_system.explosion_size > 1):
+		dynamite_placement_system.explosion_size -= 1
