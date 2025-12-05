@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://jq4l52f1qyhk"]
+
+[ext_resource type="Script" uid="uid://c7h381xva5mup" path="res://scripts/main_character_sprite.gd" id="1_2tsjo"]
+[ext_resource type="SpriteFrames" uid="uid://c0jg3amqwojg7" path="res://resources/aling_dina.tres" id="2_0h2ng"]
+
+[node name="MainCharacterSprite" type="Node2D"]
+script = ExtResource("1_2tsjo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("2_0h2ng")
+animation = &"idle"

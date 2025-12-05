@@ -1,0 +1,5 @@
+[
+	{"location": "main_menu_bg", "music": "agartha"},
+	{"speaker": "Dina", "text": "Lahat, lubog?… Our house, our community, This… this can’t be real. If the sea took my island… maybe the city still stands. I need to know what happened. I need… answers.", "expression": "sad", "voiceline": "dina_line_004"},
+	{"next_scene": "", "transition": "fade"}
+]

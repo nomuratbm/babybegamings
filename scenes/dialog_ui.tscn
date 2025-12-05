@@ -1,0 +1,124 @@
+[gd_scene load_steps=13 format=3 uid="uid://d3uyp6hpr06nf"]
+
+[ext_resource type="Texture2D" uid="uid://ceiag4q0mquqj" path="res://assets/PASABOG DIALOGUE BOX.png" id="1_xh3aw"]
+[ext_resource type="Script" uid="uid://dgftmp5pvnvr0" path="res://scripts/dialog_ui.gd" id="1_yjvli"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xh3aw"]
+
+[sub_resource type="SystemFont" id="SystemFont_xh3aw"]
+
+[sub_resource type="SystemFont" id="SystemFont_yjvli"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_edwrk"]
+font = SubResource("SystemFont_yjvli")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yjvli"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edwrk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_avaca"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8nsh5"]
+
+[sub_resource type="Gradient" id="Gradient_xh3aw"]
+offsets = PackedFloat32Array(0.014869888, 0.1598513, 0.51672864, 0.71375465, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 0, 0.5058824, 0.5058824, 0.5058824, 0, 0.09019608, 0.09019608, 0.09019608, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yjvli"]
+gradient = SubResource("Gradient_xh3aw")
+width = 28
+
+[node name="DialogUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yjvli")
+
+[node name="DialogBox" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(367, 67)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -183.33
+offset_top = -120.0
+offset_right = 183.66998
+offset_bottom = -52.99951
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xh3aw")
+
+[node name="DialogLine" type="RichTextLabel" parent="DialogBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/normal_font = SubResource("SystemFont_xh3aw")
+theme_override_font_sizes/normal_font_size = 14
+text = "In a small fishing village in the Philippines… that’s where I spent my whole life. Simple, quiet, and honestly… tiring."
+scroll_active = false
+scroll_following_visible_characters = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+custom_minimum_size = Vector2(640, 320)
+layout_mode = 0
+offset_top = 40.0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_xh3aw")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="SpeakerBox" type="Control" parent="."]
+custom_minimum_size = Vector2(96, 23.055)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 127.945
+offset_top = 32.0
+offset_right = 178.86505
+offset_bottom = 32.0
+grow_vertical = 2
+
+[node name="SpeakerName" type="Label" parent="SpeakerBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "maoi wowie"
+label_settings = SubResource("LabelSettings_edwrk")
+
+[node name="FishButton" type="Control" parent="."]
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -72.0
+offset_right = -96.0
+offset_bottom = -44.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="FishButton"]
+custom_minimum_size = Vector2(32, 28)
+layout_mode = 0
+offset_right = 36.0
+offset_bottom = 28.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yjvli")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_edwrk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_avaca")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8nsh5")
+icon = SubResource("GradientTexture1D_yjvli")
+flat = true
+
+[node name="DialogAudio" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

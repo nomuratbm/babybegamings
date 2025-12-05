@@ -61,10 +61,7 @@ func is_direction_blocked(direction_to_check: Vector2):
 	return tile_data != null
 
 func _on_area_entered(area: Area2D) -> void:
-	if (area is Player):
-		(area as Player).die()
-	else:
-		direction = calculate_new_direction(direction, false)
+	direction = calculate_new_direction(direction, false)
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is TileMapLayer:

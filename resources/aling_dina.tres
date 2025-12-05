@@ -1,0 +1,106 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://c0jg3amqwojg7"]
+
+[ext_resource type="Texture2D" uid="uid://dxg8lb63arff" path="res://assets/aling-dina-sprites.png" id="1_li03w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li03w"]
+atlas = ExtResource("1_li03w")
+region = Rect2(1032, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcr6t"]
+atlas = ExtResource("1_li03w")
+region = Rect2(1032, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1g5h"]
+atlas = ExtResource("1_li03w")
+region = Rect2(1376, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2tsjo"]
+atlas = ExtResource("1_li03w")
+region = Rect2(0, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcdbo"]
+atlas = ExtResource("1_li03w")
+region = Rect2(1720, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtr53"]
+atlas = ExtResource("1_li03w")
+region = Rect2(1720, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6kuc"]
+atlas = ExtResource("1_li03w")
+region = Rect2(2064, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_phl11"]
+atlas = ExtResource("1_li03w")
+region = Rect2(0, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h2ng"]
+atlas = ExtResource("1_li03w")
+region = Rect2(344, 0, 344, 425)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74ug7"]
+atlas = ExtResource("1_li03w")
+region = Rect2(688, 0, 344, 425)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li03w")
+}],
+"loop": true,
+"name": &"angry-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcr6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1g5h")
+}],
+"loop": true,
+"name": &"angry-talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2tsjo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcdbo")
+}],
+"loop": true,
+"name": &"sad-idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mtr53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6kuc")
+}],
+"loop": true,
+"name": &"sad-talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_phl11")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h2ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74ug7")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]

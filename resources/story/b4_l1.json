@@ -1,0 +1,8 @@
+[
+	{"location": "main_menu_bg", "music": "agartha"},
+	{"speaker": "Dina", "text": "In a small fishing village in the Philippines… that’s where I spent my whole life. Simple, quiet, and honestly… tiring. Ay nako… sometimes I wondered, how long can I live like this?", "expression": "sad", "voiceline": "dina_line_001"},
+	{"speaker": "Dina", "text": "One day, exhaustion and desperation finally caught up with me. So I thought… maybe I need something faster. Something stronger. Something louder.", "voiceline": "dina_line_002"},
+	{"speaker": "Dina", "text": "...", "voiceline": "explosion"},
+	{"speaker": "Dina", "text": "That was the day I became a dynamite fisher. And for a while… life actually felt easier. More fish, more money, more hope. I really thought I finally found my way out.", "expression": "angry", "voiceline": "dina_line_003"},
+	{"next_scene": "af3_l1", "transition": "fade"}
+]

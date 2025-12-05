@@ -17,6 +17,7 @@ config/icon="res://assets/icon.svg"
 [autoload]
 
 Utils="*res://scripts/utils.gd"
+SceneManager="*res://scripts/SceneManager.gd"
 
 [display]
 

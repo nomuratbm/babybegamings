@@ -1,0 +1,44 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dcf4sqi08clp2"]
+
+[ext_resource type="Texture2D" uid="uid://b70k08oodajla" path="res://assets/tilapia-sprite-sheet.png" id="1_sx6l7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7y4l"]
+atlas = ExtResource("1_sx6l7")
+region = Rect2(0, 43, 344, 452)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqs1g"]
+atlas = ExtResource("1_sx6l7")
+region = Rect2(0, 43, 344, 452)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkavq"]
+atlas = ExtResource("1_sx6l7")
+region = Rect2(344, 43, 344, 452)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlf61"]
+atlas = ExtResource("1_sx6l7")
+region = Rect2(688, 43, 344, 452)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7y4l")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqs1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkavq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlf61")
+}],
+"loop": true,
+"name": &"talking",
+"speed": 5.0
+}]

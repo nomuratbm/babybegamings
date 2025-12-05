@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://15avbkqoyin6"]
+
+[ext_resource type="SpriteFrames" uid="uid://dcf4sqi08clp2" path="res://resources/tilapia.tres" id="1_a7r15"]
+[ext_resource type="Script" uid="uid://ccv5s0evvrwq8" path="res://scripts/side_character_sprite.gd" id="1_rbx03"]
+
+[node name="SideCharacterSprite" type="Node2D"]
+script = ExtResource("1_rbx03")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.8, 0.8)
+sprite_frames = ExtResource("1_a7r15")
+animation = &"talking"
+frame_progress = 0.45662042

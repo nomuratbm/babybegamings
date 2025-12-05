@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb3cuys3kp70w"]
+
+[ext_resource type="Script" uid="uid://bnxjtl5lrbfex" path="res://scripts/story.gd" id="1_of347"]
+[ext_resource type="Texture2D" uid="uid://y467jboi3ixx" path="res://assets/images/supreme.png" id="2_d52np"]
+[ext_resource type="PackedScene" uid="uid://jq4l52f1qyhk" path="res://scenes/main_character_sprite.tscn" id="3_2tlxm"]
+[ext_resource type="PackedScene" uid="uid://15avbkqoyin6" path="res://scenes/side_character_sprite.tscn" id="4_yrqcj"]
+[ext_resource type="PackedScene" uid="uid://d3uyp6hpr06nf" path="res://scenes/dialog_ui.tscn" id="5_he5lq"]
+
+[node name="Story" type="Node2D"]
+script = ExtResource("1_of347")
+
+[node name="BackgroundLayer" type="CanvasLayer" parent="."]
+layer = -99
+
+[node name="Background" type="TextureRect" parent="BackgroundLayer"]
+unique_name_in_owner = true
+modulate = Color(0.3105337, 0.3105337, 0.3105337, 1)
+custom_minimum_size = Vector2(640, 360)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_d52np")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="DialogLayer" type="CanvasLayer" parent="."]
+
+[node name="CharacterContainer" type="Control" parent="DialogLayer"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MainCharacterSprite" parent="DialogLayer/CharacterContainer" instance=ExtResource("3_2tlxm")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(-170, -170)
+
+[node name="SideCharacterSprite" parent="DialogLayer/CharacterContainer" instance=ExtResource("4_yrqcj")]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(170, -170)
+
+[node name="DialogUI" parent="DialogLayer" instance=ExtResource("5_he5lq")]
+unique_name_in_owner = true
