@@ -1,0 +1,8 @@
+[
+	{"location": "main_menu_bg", "music": "agartha"},
+	{"speaker": "Fishcaya", "text": "You’re still alive? Ugh. Alam mo, nakakainis ka na.",  "voiceline": "fishcaya_line_031"},
+	{"speaker": "Dina", "text": "I’m done running. I’m done denying what I did. Unlike you… I can change. And I will stop you — for my island, for the people, for the future.", "expression": "angry", "voiceline": "dina_line_019"},
+	{"speaker": "Fishcaya", "text": "You think the truth will save you?",  "voiceline": "fishcaya_line_034"},
+	{"speaker": "Dina", "text": "No… but it will defeat you.", "expression": "angry", "voiceline": "dina_line_020"},
+	{"next_scene": "", "transition": "fade"}
+]
